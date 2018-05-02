@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>娃娃币明细</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/weui.min.css" />
+		<link rel="stylesheet" href="../css/jquery-weui.min.css" />
+		<link rel="stylesheet" href="../css/moneyDetial.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+	</head>
+	<body>
+		<div id="list" class='demos-content-padded weui-infinite-scroll'>
+      		<div class="weui-cells">
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c00im">
+			      +0.55
+			    </div>
+			  </div>
+			   <div class="weui-cell">
+			    <div class="weui-cell__bd weui-cell_primary">
+			      <p class="f16 c00im">领取</p>
+			      <p class="f13 c7d">
+			      	<span>
+			      		2017-12-22
+			      	</span>  
+			      	<span >
+			      		12:25:25
+			      	</span>
+			      </p>
+			    </div>
+			    <div class="weui-cell__ft f21 c0b0im">
+			      +0.55
+			    </div>
+			  </div>
+			  
+	    </div>
+	    <div class="weui-loadmore">
+	      <i class="weui-loading"></i>
+	      <span class="weui-loadmore__tips">正在加载</span>
+	    </div>
+		
+	</body>
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/fastclick.js"></script>
+	<script>
+	  $(function() {
+	    FastClick.attach(document.body);
+	  });
+	</script>
+	<script src="../js/jquery-weui.min.js"></script>
+	<script src="../js/moneyDetial.js"></script>
+</html>

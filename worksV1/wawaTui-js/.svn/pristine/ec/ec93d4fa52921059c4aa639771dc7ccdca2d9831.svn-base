@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>零钱</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/weui.min.css" />
+		<link rel="stylesheet" href="../css/jquery-weui.min.css" />
+		<link rel="stylesheet" href="../css/myMoney.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/GetQueryString.js"></script>
+	</head>
+	<body ontouchstart>
+		<div class="box demos-content-padded bgfb h100">
+			<div class="money-head">
+				<img src="../img/money_title.png" alt="" />
+			</div>
+			<div class="money-num tc mb35">
+				<p class="f17">我的娃娃币</p>
+				<!--<p class="f14">21.00</p>-->
+				<p class="f41 money-all">
+					<img src="../img/money_icon.png" alt="" />
+					<font class="f41">--</font>
+				</p>
+			</div>
+			<div class="money-todo">
+				<a href="javascript:;" class="weui-btn weui-btn_primary open-popupp" data-target="#full">
+					获取娃娃币1
+				</a>
+				<!--<a href="javascript:;" class="weui-btn weui-btn_primary open-popup" data-target="#half">
+					获取娃娃币2
+				</a>-->
+				<!--<a href="javascript:;" id="show-confirm" class="weui-btn weui-btn_primary">
+					获取娃娃币2
+				</a>-->
+				<a href="./toMoney.html" class="weui-btn weui-btn_default">
+					提取娃娃币
+				</a>
+				<a href="./moneyDetial.html" class="money-detial tc f16 c50">
+					娃娃币明细
+				</a>
+				<div id="code" style="display: none"></div>
+			</div>
+			
+		    <div id="full" class="weui-popup__container">
+		      <div class="weui-popup__overlay" style="z-index: 2;"></div>
+		      <div class="weui-popup__modal close-pop" style="overflow-y: hidden;width: 100%;height: 100%;left: 0%;top: 0px;z-index: 8;"> 
+		        <canvas id="img_back" width="375" height="667"></canvas>
+		        <img src="../img/ma.png" id="ma-img" alt="" />
+		        <div>
+		        	<img class="close-popp" src="../img/share1.png" style="display: none;" alt="" />
+		        	<img class="close-popp" src="../img/share2.png" style="display: none;" alt="" />
+		        	<img class="close-popp" src="../img/share3.png" style="display: none;" alt="" />
+		        </div>
+		        <img id="close-popp" src="../img/share2.png" style="display: none;" alt="" />
+		      </div>
+		    </div>
+		</div>
+		<script src="../js/myMoney.js"></script>
+		<script src="../js/fastclick.js"></script>
+		
+		 <script>
+		  $(function() {
+		    FastClick.attach(document.body);
+		  });
+		</script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/jquery.qrcode.min.js"></script>
+		 
+		<script>  
+		    //任意字符串 生成二维码  
+		    //默认使用Canvas画图  
+		    var codeImg = function(codeUrl){
+		    	$('#code').qrcode(codeUrl);
+//		    	var qecodeImgUrl = $('#code').find('canvas')[0].toDataURL();
+		    	return $('#code').find('canvas')[0].toDataURL();
+		    }
+//		    $('#code').qrcode('fengyichao');
+//		    var qecodeImgUrl = $('#code').find('canvas')[0].toDataURL();
+		</script>
+		<script>
+		
+			var dataPopup = 0;
+			$('.open-popupp').click(function(){
+				console.log('dataPopup='+dataPopup)
+				if(dataPopup) return;
+				$.showLoading("正在加载...");
+				setTimeout(function(){
+					$.hideLoading();
+					$.toptip('网络不佳，请重试', 'warning');
+				},2000);
+//				dataPopup = 1;
+			})
+		</script>
+		<script>
+			$(function(){
+				$('#close-popp').load(function(){
+					
+					var qecodeImgUrl;//生成二维码的url
+					var storage = window.localStorage;
+	  
+					//	  获取userId
+						var userId = GetQueryString('__hbt');
+						storage.setItem('wwtUserId',userId);/*存储wwtUserId到缓存中*/
+						var data = {
+					// 		userId:userId  //真是数据
+							'userId':201919   //测试数据
+						};
+						console.log(data)
+						
+						  /*查询娃娃币*/
+						 var ajaxMyMoney = function(dataInfo){//ajax获取娃娃币，以及邀请链接
+						 	
+						 
+							 $.ajax({	
+							 	type:"post",
+							 	url:"http://dbggm.imoyuu.com/api/getUser/getUserInfo",
+							 	async:true,
+							 	data:dataInfo,
+							 	success:function(data){
+							 		
+							 		var dollCoin,dollCoinExchange;
+							 		if(data.code == 0){//成功
+							 			dollCoin = data.data.dollCoin;
+							 			dollCoinExchange = data.data.dollCoinExchange;//金币数量,金币和余额兑换比例
+							 		}else{//失败
+							 			dollCoin=0;
+							 			dollCoinExchange=10;
+							 		}
+							 		storage.setItem('dollCoinExchange',dollCoinExchange);//将金币和余额兑换比例存入缓存；
+						//	 		console.log(data.data.dollCoin);
+						//			storage.setItem('myDollCoin',data.data.dollCoin);/*存储到缓存中*/
+						//	 		$('.money-all font').text(data.data.dollCoin);
+							 		storage.setItem('myDollCoin',dollCoin);/*存储娃娃币余额到缓存中*/
+							 		$('.money-all font').text(dollCoin);
+							 		qecodeImgUrl = codeImg(data.data.serverHost+'?userId='+dataInfo.userId);//生成二维码
+							 	},
+							 	error:function(error){
+									var dataCode = 0;
+									storage.setItem('myDollCoin',dataCode);/*存储到缓存中*/
+							 		$('.money-all font').text(dataCode);
+							 	}
+							 	
+							 });
+						 
+						}
+						ajaxMyMoney(data);
+					
+					
+					
+					var num = parseInt( Math.random()*3 + 1);
+//					console.log(num)
+//					$('#close-popp').attr('src',"../img/share"+num+".png");
+					setTimeout(function(){
+						var Wheight = $(window).height(),Wwidth = $(window).width();
+						$('.close-popp').css({'width':Wwidth,'height':Wheight});
+						$('#ma-img').css('width',Wwidth*0.33);
+						$('#img_back').css({'width':Wwidth,'height':Wheight});
+	//					weui-popup__modal close-pop
+	//					$('#full .weui-popup__modal.close-pop').css('height',Wheight);
+						
+						
+						var img_back = $('#img_back')[0];
+						var img_back1 = img_back.getContext("2d");
+						
+						var img_b = $('.close-popp')[num -1];
+//						var img_ma = $('#ma-img')[0];
+						var img_ma = new Image();
+//						var qecodeImgUrl = codeImg('YouWangFa,MeiWangFa!SB!!!');//生成二维码
+						console.log(qecodeImgUrl);
+						img_ma.src = qecodeImgUrl;
+						
+//						img_back1.drawImage(img_b,0,0,parseInt(Wwidth + 15) ,parseInt(Wheight+20));//先画出大图
+//						img_back1.drawImage(img_ma,Wwidth*0.67,Wheight*0.72,Wwidth*0.34,Wwidth*0.358);
+						
+						var drawImage = function(a,b,c,d){
+							img_back1.drawImage(img_b,0,0,parseInt(Wwidth + 15) ,parseInt(Wheight+30));//先画出大图
+							img_back1.drawImage(img_ma,Wwidth*a,Wheight*b,Wwidth*c,Wwidth*d);
+						}
+						
+//						判断加载的哪一个图片
+						
+						
+						if(num == 1){
+							console.log(111111111)
+							drawImage(0.680,0.746,0.33,0.33);
+						}else if(num == 2){
+							console.log(2222222222)
+							drawImage(0.349,0.266,0.36,0.37);
+						}else{
+							console.log(3333333333)
+							drawImage(0.652,0.728,0.36,0.37);
+						}
+						
+						var img_cc = new Image();
+						img_cc.src = img_back.toDataURL();
+//						img_cc.width = Wwidth*0.8;
+						img_cc.width = Wwidth;
+						img_cc.onload = function(){
+							dataPopup = 1;
+							$('.open-popupp').click(function(){
+								if(dataPopup){
+									$.showLoading("正在加载...");
+									$.hideLoading();
+									$('#full').popup();    
+									$('#full .weui-popup__modal').html(img_cc);
+//									var html = '<div class="tc" style="width: '+Wwidth+'px;position:fixed;top:0px;left:0px;color:#fff;background:rgba(0,0,0,0.5);padding-top: 8px;padding-bottom: 8px;"><p class="tc">长按图片发送到为微信群/保存发朋友圈</p><p class="tc">好友扫码进入游戏抓娃娃</p><p class="tc">至少获得20金币</p></div>'
+//									$('#full .weui-popup__overlay').append(html);
+//									$.toptip('成功', 'success');
+									
+								}else return;
+								
+								
+							})
+							console.log('1')
+							
+						}
+					},1000)
+					$('.close-pop').click(function(){
+						$.closePopup()
+					})
+				})
+			})
+			
+		</script>
+	</body>
+</html>

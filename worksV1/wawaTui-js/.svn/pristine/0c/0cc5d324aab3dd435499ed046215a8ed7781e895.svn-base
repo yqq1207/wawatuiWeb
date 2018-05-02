@@ -1,0 +1,1 @@
+var getAjaxUrl = 'http://dbggm.imoyuu.com';

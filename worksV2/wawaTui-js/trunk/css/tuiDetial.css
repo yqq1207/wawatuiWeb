@@ -1,0 +1,52 @@
+.header{
+	width: 100%;
+	height: 40px;
+	padding: 12px 14px 5px;
+	box-sizing: border-box;
+}
+.header img{
+	float: right;
+}
+.lh40{
+	height: 40px;
+	line-height: 46px;
+}
+.lh44{
+	height: 44px;
+	line-height: 44px;
+}
+.weui-grid{
+	width: 50%;
+	padding: 0;
+	padding-left: 25px;
+}
+.weui-grids .pl10{
+	padding-left: 10px;
+}
+.weui-grid img{
+	vertical-align: middle;
+}
+.weui-grid-list{
+	overflow: hidden;
+}
+.weui-grid-list:after {
+    left: 0;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+.weui-grids:before{
+	border: none;
+}
+.toolbar{
+	background: none;
+}
+.weui-popup__modal .modal-content{
+	padding-top: 1.5rem;
+}
+/*.weui-btn{
+	line-height: 2.35555556;
+}*/

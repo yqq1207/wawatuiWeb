@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>娃娃币</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/weui.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="https://weui.io/weui.css"/>-->
+		<link rel="stylesheet" href="../css/jquery-weui.min.css" />
+		<link rel="stylesheet" href="../css/myMoney.css" />
+		<!--<script src="../js/jquery-1.11.0.min.js"></script>-->
+		<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+		<script src="../js/url.js"></script>
+		<script src="../js/GetQueryString.js"></script>
+	</head>
+	<body ontouchstart>
+		<div class="box demos-content-padded bgfb h100">
+			<div class="money-head">
+				<img src="../img/money_title.png" alt="" />
+			</div>
+			<div class="money-num tc mb35">
+				<p class="f17">我的娃娃币</p>
+				<p class="f41 money-all">
+					<img src="../img/money_icon.png" alt="" />
+					<font class="f41">--</font>
+				</p>
+			</div>
+			<div class="money-todo"> 
+				<a href="javascript:;" class="weui-btn weui-btn_primary open-popupp" data-target="#full">
+					获取娃娃币
+				</a>
+				<a href="./toMoney.html" class="weui-btn weui-btn_default">
+					提取娃娃币
+				</a>
+				<a href="./moneyDetial.html" class="money-detial tc f16 c50">
+					娃娃币明细
+				</a>
+				<div id="code" style="display: none"></div>
+			</div>
+			
+		    <div id="full" class="weui-popup__container">
+		      <div class="weui-popup__overlay close-popup" style="z-index: 2;"></div>
+		      <div class="weui-popup__modal close-pop" style="overflow-y: hidden;width: 100%;max-height: 637px;left: 0%;top: 30px;z-index: 8;"> 
+		        <canvas id="img_back" width="375" height="637"></canvas>
+		      </div>
+		    </div>
+		</div>
+		<script src="../js/fastclick.js"></script>
+		<script>
+		  $(function() {
+		    FastClick.attach(document.body);
+		  });
+		</script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/jquery.qrcode.min.js"></script>
+		<script src="../js/myMoney.js"></script>
+	</body>
+</html>

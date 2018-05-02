@@ -1,0 +1,42 @@
+$(function(){
+	/*根据浏览器窗口大小设置页面狂傲*/
+	$(".box").css('height',$(window).height() - 30);
+	$(window).resize(function(){
+		$('.box').css('height',$(window).height() - 30);
+	});
+	
+	
+	/*几种分享的情况*/
+	$(document).on("open", ".weui-popup-modal", function() {
+	    console.log("open popup");
+	  }).on("close", ".weui-popup-modal", function() {
+	    console.log("close popup");
+	  });
+	  $(document).on("click", "#show-confirm", function() {
+	    $.confirm("快点击右上角分享，来获取娃娃币吧", "确认分享?", function() {
+	      $.toast("您选择了分享!");
+	    }, function() {
+	      //取消操作
+	      $.toast("您取消了分享!",'cancel');
+	    });
+	  });
+	  
+	  var storage = window.localStorage;
+	  
+	  /*查询娃娃币*/
+	 $.ajax({
+	 	type:"post",
+	 	url:"http://dbggm.imoyuu.com/api/getUser/getUserInfo",
+	 	async:true,
+	 	data:'',
+	 	success:function(data){
+//	 		console.log(data.data.dollCoin);
+			storage.setItem('myDollCoin',data.data.dollCoin);/*存储到缓存中*/
+	 		$('.money-all font').text(data.data.dollCoin);
+	 	},
+	 	error:function(error){
+	 		console.log(error)
+	 	}
+	 	
+	 });
+})

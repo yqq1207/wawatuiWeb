@@ -1,0 +1,59 @@
+$(function(){
+	$('.box').css('height',$(window).height() - 30);
+	/*判断是否为空*/
+	var moneyNum = function(option){
+		if(option.val() == ''){
+			$('.to-check-money').attr('id','');
+			$('.to-money-alt').eq(0).addClass('active').siblings().removeClass('active');
+		}else{
+			$('.to-check-money').attr('id','');
+			/*比较用户输入的提取金额和余额的*/
+			if( parseFloat( option.val() ) > parseFloat( $('.to-money-alt01 .money-all').text() )){
+				$('.to-money-alt02').html('<span style="color:red">可提取娃娃币不足</span>');
+				$('.to-check-money').attr('id','');
+			}else{
+				$('.to-money-alt02').html('提取<font class="money-all">'+option.val()+'</font>个娃娃币到余额');
+				$('.to-check-money').attr('id','to-check-money');
+			}
+//			$('.to-money-alt02 .money-all').text(option.val());
+			$('.to-money-alt').eq(1).addClass('active').siblings().removeClass('active');
+		}
+	};
+	
+	
+	/*全部提取*/
+	$('.check-all').click(function(){
+		var num = parseFloat( $(this).parent().find('.money-all').text() );
+		$('.input-money-num').val(num);
+		moneyNum($('.input-money-num'));
+	});
+	
+	/*手动输入金额*/
+	$('.input-money-num').keyup(function(){
+		moneyNum($(this))
+//					if($(this).val() == ''){
+//						console.log('是空')
+//						$('.to-check-money').addClass('weui-btn_disabled')
+//						
+//					}else{
+//						console.log('不是空')
+//						$('.to-check-money').removeClass('weui-btn_disabled')
+//					}
+	});
+	$(window).resize(function(){
+		$('.box').css('height',$(window).height() - 30);
+	});
+	$('body').on('click','#to-check-money',function(){
+		$(document).on("click", "#to-check-money", function() {
+		    $.confirm("提取娃娃币", "提取娃娃币", function() {
+		      $.toast("操作成功!");
+		    }, function() {
+		      //取消操作
+		      $.toast("您取消了提取!",'cancel');
+		    });
+		});
+	})
+	
+	
+	
+})

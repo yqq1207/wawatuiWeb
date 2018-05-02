@@ -1,0 +1,6 @@
+.weui-cells{
+	margin-top: 0;
+}
+.weui-cell:before{
+	left: 0;
+}

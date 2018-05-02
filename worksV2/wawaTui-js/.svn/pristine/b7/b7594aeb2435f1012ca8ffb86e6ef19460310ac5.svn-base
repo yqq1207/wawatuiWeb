@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>娃娃币明细</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/weui.min.css" />
+		<link rel="stylesheet" href="../css/jquery-weui.min.css" />
+		<link rel="stylesheet" href="../css/moneyDetial.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+		<script src="../js/goBack.js"></script>
+	</head>
+	<body>
+		<div id="list" class='demos-content-padded weui-infinite-scroll'>
+      		<div class="weui-cells">
+			
+			</div>  
+	    </div>
+	    <div class="weui-loadmore">
+	      <i class="weui-loading"></i>
+	      <span class="weui-loadmore__tips">正在加载</span>
+	    </div>
+		
+	</body>
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/fastclick.js"></script>
+	<script>
+	  $(function() {
+	    FastClick.attach(document.body);
+	  });
+	</script>
+	<script src="../js/jquery-weui.min.js"></script>
+	<script src="../js/moneyDetial.js"></script>
+</html>

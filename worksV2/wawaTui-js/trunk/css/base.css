@@ -1,0 +1,188 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;	
+}
+li{
+	list-style: none;
+}
+.f12{
+	font-size: 12px;
+}
+.f13{
+	font-size: 13px;
+}
+.f14{
+	font-size: 14px;
+}
+.f16{
+	font-size: 16px;
+}
+.f17{
+	font-size: 17px;
+}
+.f18{
+	font-size: 18px;
+}
+.f21{
+	font-size: 21px;
+}
+.f22{
+	font-size: 22px;
+}
+.f32{
+	font-size: 32px;
+}
+.f328{
+	font-size: 38px;
+}
+.f41{
+	font-size: 41px;
+}
+.f42{
+	font-size: 42px;
+}
+.tc{
+	text-align: center;
+}
+.tr{
+	text-align: right;
+}
+.tl{
+	text-align: left;
+}
+.fwn{
+	font-weight: 100;
+}
+.fw{
+	font-weight: 700;
+}
+.bgfb{
+	background-color: #fbfbfb;
+}
+.bgfbfb{
+	background-color: #fbfbfb;
+}
+.bge9{
+	background-color: #e9e9e9;
+}
+.bgff{
+	background-color: #ffffff;
+}
+.bged{
+	background-color: #ededed;
+}
+.h100{
+	height: 100%;
+}
+.p15{
+	padding: 15px;
+}
+.pl25{
+	padding-left: 25px;
+}
+.pl30{
+	padding-left: 30px;
+}
+.plr15{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.plr8{
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.bgf2{
+	background-color: #f2f2f2;
+}
+.bgf0eff5{
+	background-color: #f0eff5;
+}
+.be2{
+	border: 1px solid #e2e2e2;
+}
+.bfb{
+	border: 1px solid #fbfbfb;
+}
+.bbe2{
+	border-bottom: 1px solid #e2e2e2;
+}
+.input-style{
+	border: 0px;
+	outline:none;
+	background-color:#ffffff;
+}
+.dpib{
+	display:inline-block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearfix { 
+  *zoom: 1; 
+} 
+ 
+.clearfix:before, 
+.clearfix:after { 
+  display: table; 
+  line-height: 0; 
+  content: ""; 
+} 
+.clearfix:after { 
+  clear: both; 
+}
+
+.c50{
+	/*color: #506d92;*/
+	color: #4e649c;
+}
+.c7d{
+	color: #7d7d7d;
+}
+.c00{
+	color: #000000;
+}
+.c00im{
+	color: #000000!important;
+}
+.c0b0{
+	color: #00bb00;
+}
+.c0b0im{
+	color: #00bb00!important;
+}
+.c99{
+	color: #999999;
+}
+.c716f75{
+	color: #c716f75;
+}
+.c37{
+	color: #373737;
+}
+.cfb8e25{
+	color: #fb8e25;
+}
+.mt22{
+	margin-bottom: 22px;
+}
+.mt30{
+	margin-bottom: 30px;
+}
+.mb35{
+	margin-bottom: 35px;
+}
+.mtop15{
+	margin-top: 15px;
+}
+.pb10{
+	padding-bottom: 10px;
+}
+.pt10{
+	padding-top: 10px;
+}

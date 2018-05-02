@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>零钱提现</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/weui.min.css" />
+		<link rel="stylesheet" href="../css/jquery-weui.min.css" />
+		<link rel="stylesheet" href="../css/toMoney.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+	</head>
+	<body ontouchstart>
+		<div class="demos-content-paddedk box p15 bgf0eff5">
+			<div class="bfb">
+				<div class="clearfix p15 bgfb">
+					<div class="fl dpib f16">红包奖励</div>
+					<div class="fl dpib tl pl30">
+						<p class="f16 tl c50"><font class="money-num">--</font>元</p>
+						<p class="f14 tl c99">
+							立即到钱包
+						</p>
+					</div>
+					
+				</div> 			
+				<div class="p15 bgff">
+					<p>
+						提取娃娃币数量
+					</p>
+					<div class="bbe2 clearfix pb10 to-money-box">
+						<!--<p class="f22 fl">-->
+							<img src="../img/money_icon.png" class="fl to-money-icon" alt="" />
+						<!--</p>-->
+						<input type="number" class="input-style f328 input-money-num fl plr15" autofocus="autofocus" value=""/>
+					</div>
+					<div class="c99 mt22 pt10 f14">
+						<div class="to-money-alt to-money-alt01 active">
+							<p class="last-money">
+								<span class="f12">娃娃币余额</span>
+								<img src="../img/money_icon_gray.png" class="last-money-img" alt="" />
+								<font class="money-all f12 money-num">--</font>，
+								<span class="check-all c50">全部提取</span>
+							</p>
+						</div>
+						<p class="to-money-alt to-money-alt02 f12">
+							提取<font class="money-all">--</font>个娃娃币到余额	
+						</p>
+					</div>
+					<a href="javascript:;" class="weui-btn weui-btn_primary to-check-money">
+						提取
+					</a>
+				</div>	
+			</div>
+		</div>
+	</body>
+	<script src="../js/fastclick.js"></script>
+	<script>
+		$(function() {
+		    FastClick.attach(document.body);
+		});
+	</script>
+	<script src="../js/jquery-weui.min.js"></script>
+	<script src="../js/toMoney.js"></script>
+</html>

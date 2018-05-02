@@ -1,0 +1,47 @@
+.input-money-num{
+	color: #5e5e5e; /* 光标的颜色*/
+	text-shadow: 0px 0px 0px #000; /* 文本颜色 */ 
+	-webkit-text-fill-color: transparent;
+	width: 78%;
+}
+.to-money-box{
+	display: flex;
+	flex-flow: row;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: -webkit-flex;
+	justify-content:center;
+	align-items:center;
+}
+.last-money{
+	display: flex;
+	flex-flow: row;
+	display: -webkit-flex;
+	justify-content:flex-start;
+	align-items:center;
+}
+.to-money-icon{
+	display: block;
+	width:28px;
+	height: 28px;
+	vertical-align: middle;
+}
+.to-money-alt{
+	display: none;
+}
+.last-money-img{
+	width: 14px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.to-money-alt.active{
+	display: block;
+}
+.weui-btn_primary{
+    background-color: #9ed99d;
+    color: hsla(0,0%,100%,.6);
+}
+#to-check-money.weui-btn_primary{
+	background-color: #1aad19;
+    color: #fff;
+}

@@ -1,0 +1,38 @@
+.weui-navbar{
+	background: #fff;
+}
+.weui-cell:before{
+	left: 0;
+}
+.weui-cells {
+    margin-top: 0.376471em;
+}
+.weui-cell{
+	padding: 8px 15px 8px 10px;
+}
+.weui-cell__bd{
+	margin-left: 5px;
+}
+.weui-navbar__item {
+    color: #959595;
+    padding: 13px 0 10px;
+}
+.weui-navbar__item.weui-bar__item--on {
+    color: #1aad19;
+    background-color: #fff;
+    border-bottom: 3px solid #1aad19;
+}
+.weui-navbar__item{
+	font-size: 16px;
+}
+.weui-navbar__item:after{
+	border: none;
+	width: 0;
+}
+.weui-btn{
+	line-height: 1.95555556;
+	font-size: 16px;
+}
+.weui-cell__ft{
+	display: none;
+}

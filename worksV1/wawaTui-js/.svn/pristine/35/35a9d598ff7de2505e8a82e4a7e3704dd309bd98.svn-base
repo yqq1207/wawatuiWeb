@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>零钱</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/weui.min.css" />
+		<link rel="stylesheet" href="../css/jquery-weui.min.css" />
+		<link rel="stylesheet" href="../css/myMoney.css" />
+		<script src="../js/jquery-1.11.0.min.js"></script>
+	</head>
+	<body ontouchstart>
+		<div class="box demos-content-padded bgfb h100">
+			<div class="money-head">
+				<img src="../img/money_title.png" alt="" />
+			</div>
+			<div class="money-num tc mb35">
+				<p class="f17">我的娃娃币</p>
+				<!--<p class="f14">21.00</p>-->
+				<p class="f41 money-all">
+					<img src="../img/money_icon.png" alt="" />
+					<font class="f41">2221.00</font>
+				</p>
+			</div>
+			<div class="money-todo">
+				<a href="javascript:;" class="weui-btn weui-btn_primary open-popup" data-target="#full">
+					获取娃娃币1
+				</a>
+				<a href="javascript:;" class="weui-btn weui-btn_primary open-popup" data-target="#half">
+					获取娃娃币2
+				</a>
+				<!--<a href="javascript:;" id="show-confirm" class="weui-btn weui-btn_primary">
+					获取娃娃币2
+				</a>-->
+				<a href="./toMoney.html" class="weui-btn weui-btn_default">
+					提取娃娃币
+				</a>
+				<a href="./moneyDetial.html" class="money-detial tc f16 c50">
+					娃娃币明细
+				</a>
+			</div>
+			<div id="half" class="weui-popup__container popup-bottom">
+		      <div class="weui-popup__overlay"></div>
+		      <div class="weui-popup__modal">
+		        <div class="toolbar">
+		          <div class="toolbar-inner">
+		            <a href="javascript:;" class="picker-button close-popup">关闭</a>
+		            <h1 class="title">获取娃娃币</h1>
+		          </div>
+		        </div>
+		        <div class="modal-content">
+		          <div class="weui-grids">
+		            <p style="padding: 20px;">
+		            	快点击右上角分享，来获取娃娃币吧
+		            </p>
+		           
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <div id="full" class="weui-popup__container">
+		      <div class="weui-popup__overlay"></div>
+		      <div class="weui-popup__modal plr15">
+		        
+		         <p style="padding: 20px;">
+		            	快点击右上角分享，来获取娃娃币吧
+		            </p>
+		        <a href="javascript:;" class="weui-btn weui-btn_primary close-popup">关闭</a>
+		      </div>
+		    </div>
+		</div>
+		<script src="../js/myMoney.js"></script>
+		<script src="../js/fastclick.js"></script>
+		
+		 <script>
+		  $(function() {
+		    FastClick.attach(document.body);
+		  });
+		</script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script>
+			
+		</script>
+	</body>
+</html>
